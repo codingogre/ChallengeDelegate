@@ -15,4 +15,11 @@
     // Insert code here to initialize your application
 }
 
+- (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)frameSize
+{
+    NSSize mySize = NSMakeSize(frameSize.width, frameSize.width * 2);
+    NSLog(@"mySize is %f wide and %f tall", mySize.width, mySize.height);
+    return mySize;
+}
+
 @end
